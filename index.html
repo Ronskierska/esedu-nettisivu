@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Nettisivu</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oma nettisivu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Oma nettisivu</h1>
+    <h2>Opiskelu</h2>
+    <p>Opiskelen <a href="http://www.esedu.fi" target="_blank">Esedulla</a> tieto- ja viestintä tekniikan alalla.</p>
+    <h2>Harrastukset</h2>
+    <ul>
+        <li>Pelaaminen</li>
+        <li>Kalastus</li>    
+    </ul>
+    <button id="kalanappi">Kala</button>
+    
+    <h2>Yhteystiedot</h2>
+    <dl>
+        <dt>sähköposti:</dt>
+        <dd><img src="mail.png"></dd>
+    </dl>
 
-    </head>
-
-    <body>
-        morjesta
-    </body>
+</body>
 </html>
+<script>
+    const kala = document.getElementById("kalanappi");
+    var state = true;
+    const vaihdateksti = () => {
+        if (state == true) {
+            kala.textContent = "Siika";
+            state = false;
+        }
+        else{
+            kala.textContent = "Kala";
+            state = true;
+        }
+    }
+    kala.addEventListener("click", vaihdateksti );
+</script>
