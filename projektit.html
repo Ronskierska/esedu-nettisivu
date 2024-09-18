@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Eero Arvola</h1>
+    <h2 class="opiskelu1">Projektit
+    </h2> 
+    <div class="opiskeludiv"><p id="opiskeluid1"><a href="http://www.esedu.fi" target="_blank"></p></div> 
+       
+    <button id="kalanappi">Kala</button>  
+    
+    <div class="h2div">
+        <div>
+            <h2></h2>
+        </div>
+                
+    </div>
+    <div class="tietojadiv"><p id="tietojateksti"></p></div>
+    
+    <h2 class="yhteystiedot1"></h2>
+    <div class="sähköpostidiv"> <dl>
+        <dt id="sähköpostiid1"></dt>
+        <dd id="gmailkuvaid1"><img class="opasiitti" src="" style="max-width: 100%" ></dd>
+    </dl>
+    <div class="maapallogifi"><img id="maapallogif" src="maapallopyörivä.gif" width="100" height="100" style="max-width: 100%" ></div>
+    
+    <div id="projektinappidiv">
+        <button id="projektitnappi">Tiedot</button>   
+    </div>
+    
+</body>
+</html>
+<script>
+    const kala = document.getElementById("kalanappi");
+    var state = true;
+    const vaihdateksti = () => {
+        if (state == true) {
+            kala.textContent = "Siika";
+            state = false;
+        }
+        else{
+            kala.textContent = "Kala";
+            state = true;
+        }
+    }
+    kala.addEventListener("click", vaihdateksti );
+
+    const tiedot = document.getElementById("projektitnappi")
+    tiedot.onclick = function () {
+        location.href = "index.html";
+    };
+</script>

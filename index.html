@@ -30,7 +30,7 @@
     <div class="maapallogifi"><img id="maapallogif" src="maapallopyörivä.gif" width="100" height="100" style="max-width: 100%" ></div>
     
     <div id="projektinappidiv">
-        <button id="projektitnappi"> Projektit </button>
+        <button id="projektitnappi">Projektit</button>   
     </div>
     
 </body>
@@ -49,4 +49,9 @@
         }
     }
     kala.addEventListener("click", vaihdateksti );
+
+    const projektit = document.getElementById("projektitnappi")
+    projektit.onclick = function () {
+        location.href = "projektit.html";
+    };
 </script>
