@@ -10,9 +10,9 @@
     <h1>Eero Arvola</h1>
     <h2 class="opiskelu1">Projektit
     </h2> 
-    <div class="opiskeludiv"><p id="opiskeluid1"><a href="http://www.esedu.fi" target="_blank"></p></div> 
+    <div id="projektitdiv">.</div> 
        
-    <button id="kalanappi">Kala</button>  
+      
     
     <div class="h2div">
         <div>
@@ -36,20 +36,6 @@
 </body>
 </html>
 <script>
-    const kala = document.getElementById("kalanappi");
-    var state = true;
-    const vaihdateksti = () => {
-        if (state == true) {
-            kala.textContent = "Siika";
-            state = false;
-        }
-        else{
-            kala.textContent = "Kala";
-            state = true;
-        }
-    }
-    kala.addEventListener("click", vaihdateksti );
-
     const tiedot = document.getElementById("projektitnappi")
     tiedot.onclick = function () {
         location.href = "index.html";
